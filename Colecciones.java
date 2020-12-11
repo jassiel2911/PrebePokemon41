@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 //Cambios realizados
+//Cambios realizados2 Desde GitHub
 public class Colecciones extends Pokemon{
 
 
