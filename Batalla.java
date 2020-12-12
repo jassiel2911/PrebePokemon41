@@ -1,7 +1,0 @@
-/**
- * Batalla
- */
-public class Batalla {
-    
-    
-}

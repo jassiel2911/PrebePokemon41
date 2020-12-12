@@ -8,8 +8,7 @@ public class Pokemon {
     public String tipo;
     public Pocion pocion_pokemon;
 
-    public Pokemon(String apodo,double vida,double ataque,double defensa,double velocidad,
-                    String estado,String tipo,Pocion pocionpokemon){
+    public Pokemon(String apodo,double vida,double ataque,double defensa,double velocidad,String estado,String tipo,Pocion pocionpokemon){
         this.apodo=apodo;
         this.vida=vida;
         this.ataque=ataque;
@@ -19,9 +18,8 @@ public class Pokemon {
         this.tipo=tipo;
         this.pocion_pokemon=pocionpokemon;
     }
-
     public Pokemon(){
-
+        
     }
 
     public double danio(double pts_Vida){
@@ -194,4 +192,5 @@ public class Pokemon {
     public void setPocion_pokemon(Pocion pocion_pokemon) {
         this.pocion_pokemon = pocion_pokemon;
     }
+    
 }

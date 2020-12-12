@@ -8,23 +8,24 @@ public class Jugador {
     public ArrayList<Pokemon> pokemones = new ArrayList<Pokemon>();
     public ArrayList<Pocion> pociones = new ArrayList<Pocion>();
 
-    /*//constructor
+    //constructor
     public Jugador(){
         
-    }*/
+    }
 
     //metodos
-    public void guardarPokemon(Pokemon pokemones){
+    public Pokemon guardarPokemon(Pokemon pokemones){
+        Pokemon aux = new Pokemon();
         for(int i = 0; i < this.pokemones.size(); i++){
             if(this.pokemones.get(i).apodo.equals(pokemones.apodo)){
                 if(pokemones.vida<0){
-                    this.pokemones.remove(i);
+                    this. pokemones.remove(i);
                 }
             }else{
-                elegirPokemon();
+                aux=elegirPokemon();
             }
         }
-        
+        return aux;
     }
 
     public Pokemon elegirPokemon(){
@@ -34,14 +35,14 @@ public class Jugador {
         System.out.println("Ingresa el apodo del Pokemon que vas a elegir:");
         nombre=s.nextLine();
         for(i = 0; i < this.pokemones.size(); i++){
-            if(this.pokemones.get(i).apodo.equals(nombre)){
+            if(this.pokemones.get(i).apodo.equalsIgnoreCase(nombre)){
                 return getPokemones().get(i);
             }
         }
         return this.pokemones.get(i);
     }   
 
-    public void usarPocion(Pocion tipo, Pokemon pokeUso){
+    public void usarPocion(Pokemon pokeUso){
         int opcion;
         int aux=5;
         System.out.println("Las posiocnes son las siguientes:");
@@ -66,13 +67,13 @@ public class Jugador {
         aux=-opcion;
     }
 
-    void cambiarPokemon(){
-        System.out.println("");
-    }
-
     public void listarPokemon(){     
         for(int i = 0; i < this.pokemones.size(); i++){
-            System.out.println(pokemones.get(i));  
+            System.out.println("\n\n"+pokemones.get(i).getApodo()); 
+            System.out.println("Ataque: "+pokemones.get(i).getAtaque());
+            System.out.println("Dedensa: "+pokemones.get(i).getDefensa()); 
+            System.out.println("Velocidad: "+pokemones.get(i).getVelocidad()); 
+            System.out.println("Estado: "+pokemones.get(i).getEstado());
         }
     }
 
