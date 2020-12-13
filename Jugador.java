@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Jugador {
+public class Jugador{
     static Scanner s=new Scanner(System.in);
     //atributos
     public String nombre;
@@ -71,7 +71,7 @@ public class Jugador {
         for(int i = 0; i < this.pokemones.size(); i++){
             System.out.println("\n\n"+pokemones.get(i).getApodo()); 
             System.out.println("Ataque: "+pokemones.get(i).getAtaque());
-            System.out.println("Dedensa: "+pokemones.get(i).getDefensa()); 
+            System.out.println("Defensa: "+pokemones.get(i).getDefensa()); 
             System.out.println("Velocidad: "+pokemones.get(i).getVelocidad()); 
             System.out.println("Estado: "+pokemones.get(i).getEstado());
         }

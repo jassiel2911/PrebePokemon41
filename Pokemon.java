@@ -109,7 +109,7 @@ public class Pokemon {
          } else{
             double multipicadorElemental= calculadorElemental(contrincante);
             resultado = (this.ataque - contrincante.defensa)* multipicadorElemental;
-            System.out.println("Haz causado un daño a "+ contrincante.apodo +"de: "+resultado);
+            System.out.println("Haz causado un da\u00f1o a "+ contrincante.apodo +" de: "+resultado);
          }
         return 0;
     }
@@ -121,10 +121,7 @@ public class Pokemon {
             System.out.println("Tu ataque no fue suficinete");
          } else{
             resultado = (this.ataque - contrincante.defensa);
-            System.out.println("Haz causado un daño a "+ contrincante.apodo +"de: "+resultado);
-        //
-        //verificar puntos de ataque para modificar estado
-        // 
+            System.out.println("Haz causado un da\u00f1o a " + contrincante.apodo + " de: "+resultado);
         }
         return 0;
     }

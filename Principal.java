@@ -1,15 +1,13 @@
-public class Principal {
-    
+/**
+ * @author: Pamela Espinoza
+ * @author: Brian Bautista
+ */ 
 
+public class Principal {
     public static void main(String[] args){
 
-        Bienvenida a = new Bienvenida();
-        a.inicio();
-        
-        Colecciones b = new Colecciones();
-        b.listadopokemones();
+        Batalla a = new Batalla();
+        a.pelea();
 
-        Batalla c = new Batalla();
-        c.turno();
     }
 }       
