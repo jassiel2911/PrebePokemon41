@@ -26,32 +26,32 @@ public class Batalla {
 
         Pocion pociones = new Pocion();
 
-        Pokemon pokemon1 = new Pokemon("Pikachu", 250, 160, 180, 150, "OK", "Electrico", pociones);
-        Pokemon pokemon2 = new Pokemon("Raikou", 173, 200, 160, 150, "OK", "Electrico", pociones);
+        Pokemon pokemon1 = new Pokemon("Pikachu", 250, 160, 180, 170, "OK", "Electrico", pociones);
+        Pokemon pokemon2 = new Pokemon("Raikou", 173, 200, 160, 156, "OK", "Electrico", pociones);
         Pokemon pokemon3 = new Pokemon("Manectric", 250, 176, 180, 150, "OK", "Electrico", pociones);
-        Pokemon pokemon4 = new Pokemon("Luxray", 240, 185, 180, 150, "OK", "Electrico", pociones);
-        Pokemon pokemon5 = new Pokemon("Magnezone", 160, 183, 180, 150, "OK", "Electrico", pociones);
+        Pokemon pokemon4 = new Pokemon("Luxray", 240, 185, 180, 105, "OK", "Electrico", pociones);
+        Pokemon pokemon5 = new Pokemon("Magnezone", 160, 183, 180, 107, "OK", "Electrico", pociones);
 
         // Fuego
-        Pokemon pokemon6 = new Pokemon("Charmander", 248, 160, 180, 150, "OK", "Fuego", pociones);
+        Pokemon pokemon6 = new Pokemon("Charmander", 248, 160, 180, 116, "OK", "Fuego", pociones);
         Pokemon pokemon7 = new Pokemon("Vilpix", 150, 200, 160, 150, "OK", "Fuego", pociones);
-        Pokemon pokemon8 = new Pokemon("Entei", 157, 160, 180, 150, "OK", "Fuego", pociones);
-        Pokemon pokemon9 = new Pokemon("Victini", 250, 189, 180, 150, "OK", "Fuego", pociones);
-        Pokemon pokemon10 = new Pokemon("Torchic", 185, 249, 180, 150, "OK", "Fuego", pociones);
+        Pokemon pokemon8 = new Pokemon("Entei", 157, 160, 152, 195, "OK", "Fuego", pociones);
+        Pokemon pokemon9 = new Pokemon("Victini", 250, 189, 184, 178, "OK", "Fuego", pociones);
+        Pokemon pokemon10 = new Pokemon("Torchic", 185, 200, 180, 185, "OK", "Fuego", pociones);
 
         // Hierba
         Pokemon pokemon11 = new Pokemon("Bulbasaur", 250, 160, 180, 150, "OK", "Hierba", pociones);
-        Pokemon pokemon12 = new Pokemon("Oddish", 159, 200, 160, 150, "OK", "Hierba", pociones);
-        Pokemon pokemon13 = new Pokemon("Serperior", 179, 160, 180, 150, "OK", "Hierba", pociones);
-        Pokemon pokemon14 = new Pokemon("Chikorita", 238, 160, 180, 150, "OK", "Hierba", pociones);
-        Pokemon pokemon15 = new Pokemon("Ludicolo", 154, 160, 180, 150, "OK", "Hierba", pociones);
+        Pokemon pokemon12 = new Pokemon("Oddish", 159, 200, 160, 149, "OK", "Hierba", pociones);
+        Pokemon pokemon13 = new Pokemon("Serperior", 179, 170, 195, 150, "OK", "Hierba", pociones);
+        Pokemon pokemon14 = new Pokemon("Chikorita", 238, 149, 162, 136, "OK", "Hierba", pociones);
+        Pokemon pokemon15 = new Pokemon("Ludicolo", 154, 160, 184, 103, "OK", "Hierba", pociones);
 
         // Agua
-        Pokemon pokemon16 = new Pokemon("Psyduck", 250, 160, 180, 150, "OK", "Agua", pociones);
-        Pokemon pokemon17 = new Pokemon("Gyarados", 158, 240, 180, 150, "OK", "Agua", pociones);
-        Pokemon pokemon18 = new Pokemon("Vaporeon", 159, 158, 180, 150, "OK", "Agua", pociones);
-        Pokemon pokemon19 = new Pokemon("Suicune", 243, 181, 180, 150, "OK", "Agua", pociones);
-        Pokemon pokemon20 = new Pokemon("Milotic", 172, 160, 180, 150, "OK", "Agua", pociones);
+        Pokemon pokemon16 = new Pokemon("Psyduck", 250, 160, 179, 150, "OK", "Agua", pociones);
+        Pokemon pokemon17 = new Pokemon("Gyarados", 158, 240, 168, 148, "OK", "Agua", pociones);
+        Pokemon pokemon18 = new Pokemon("Vaporeon", 159, 158, 165, 187, "OK", "Agua", pociones);
+        Pokemon pokemon19 = new Pokemon("Suicune", 243, 181, 173, 185, "OK", "Agua", pociones);
+        Pokemon pokemon20 = new Pokemon("Milotic", 172, 160, 189, 179, "OK", "Agua", pociones);
 
         // llenando arreglo
         listapokemones.add(pokemon1);
@@ -137,7 +137,7 @@ public class Batalla {
             jugador2.setPokemones(aux2);
 
         }
-
+        System.out.println("\n\n");
         // "limpiar pantalla"
         for (int i = 0; i < 50; i++)
             System.out.println();
@@ -145,6 +145,7 @@ public class Batalla {
         System.out.println(jugador1.getNombre() + " es hora de elegir a tu pokemon para la primer batalla");
         System.out.println("Cual es tu mejor Guerrero?");
         auxj1 = jugador1.elegirPokemon();
+        System.out.println("\n\n");
 
         // "Limpiar pantalla"
         for (int i = 0; i < 50; i++)
@@ -153,7 +154,7 @@ public class Batalla {
         System.out.println(jugador2.getNombre() + " es hora de elegir a tu pokemon para la primer batalla");
         System.out.println("Cual es tu mejor Guerrero?");
         auxj2 = jugador2.elegirPokemon();
-        System.out.println(auxj1);
+        System.out.println("\n\n");
 
         while (partida < 7) {
 
@@ -169,9 +170,11 @@ public class Batalla {
 
                     case 1:
                         if (partida == 1) {
+                            System.out.println("\n\n");
                             auxj2.ataque1(auxj1);
                             auxj2.calculadorElemental(auxj1);
                         } else {
+                            System.out.println("\n\n");
                             auxj2.ataque2(auxj1);
                             auxj2.calculadorElemental(auxj1);
                         }
@@ -182,19 +185,22 @@ public class Batalla {
                         int banAtaque = 0;
                         int banDefensa = 0;
                         String usarpocion;
-                        System.out.println("Pocion 'vida'");
-                        System.out.println("Pocion 'ataque'");
-                        System.out.println("Pocion 'defensa'");
+                        System.out.println("\n\n");
+                        System.out.println("Pocion-> 'vida'");
+                        System.out.println("Pocion-> 'ataque'");
+                        System.out.println("Pocion-> 'defensa'");
                         usarpocion = s.next();
-                        if (usarpocion == "vida") {
+                        if (usarpocion.equals("vida")) {
                             if (banVida == 0) {
+                               
                                 auxj2.recibePuntosvida();
                                 banVida = 1;
                             } else {
+                                
                                 System.out.println("Pocion agotada");
                             }
 
-                        } else if (usarpocion == "ataque") {
+                        } else if (usarpocion.equals("ataque")) {
                             if (banAtaque == 0) {
                                 auxj2.recibePuntosAtaque();
                                 banAtaque = 1;
@@ -202,7 +208,7 @@ public class Batalla {
                                 System.out.println("Pocion agotada");
                             }
 
-                        } else if (usarpocion == "defensa") {
+                        } else if (usarpocion.equals("defensa")) {
                             if (banDefensa == 0) {
                                 auxj2.recibePuntosDefensa();
                                 banDefensa = 1;
@@ -218,12 +224,14 @@ public class Batalla {
                         banVida = 0;
                         banAtaque = 0;
                         banDefensa = 0;
+                        System.out.println("\n\n");
                         Pokemon cambio = new Pokemon();
                         cambio = auxj2;
                         auxj2 = jugador2.guardarPokemon(cambio);
                         break;
                     /**************** */
                 }
+                System.out.println("\n\n");
                 System.out.println(jugador1.getNombre() + ", es tu turno de atacar con  " + auxj1.getApodo());
                 System.out.println("Que accion vas a realizar");
                 System.out.println("1...Atacar");
@@ -234,10 +242,12 @@ public class Batalla {
 
                     case 1:
                         if (partida == 1) {
+                            System.out.println("\n\n");
                             auxj1.ataque1(auxj2);
                             auxj1.calculadorElemental(auxj2);
                         } else {
                             auxj1.ataque2(auxj2);
+                            System.out.println("\n\n");
                             auxj1.calculadorElemental(auxj2);
                         }
                         break;
@@ -247,20 +257,23 @@ public class Batalla {
                         int banAtaque1 = 0;
                         int banDefensa1 = 0;
                         String usarpocion1;
-                        System.out.println("Pocion 'vida'");
-                        System.out.println("Pocion 'ataque'");
-                        System.out.println("Pocion 'defensa'");
+                        System.out.println("Pocion-> 'vida'");
+                        System.out.println("Pocion-> 'ataque'");
+                        System.out.println("Pocion-> 'defensa'");
                         usarpocion1 = s.next();
-                        if (usarpocion1 == "vida") {
+                        if (usarpocion1.equals("vida")) {
                             if (banVida1 == 0) {
+                                System.out.println("\n\n");
                                 auxj1.recibePuntosvida();
                                 banVida1 = 1;
                             } else {
+                                System.out.println("\n\n");
                                 System.out.println("Pocion agotada");
                             }
 
-                        } else if (usarpocion1 == "ataque") {
+                        } else if (usarpocion1.equals("ataque")) {
                             if (banAtaque1 == 0) {
+                                System.out.println("\n\n");
                                 auxj1.recibePuntosAtaque();
                                 banAtaque1 = 1;
                             } else {
@@ -314,11 +327,11 @@ public class Batalla {
                         int banAtaque = 0;
                         int banDefensa = 0;
                         String usarpocion;
-                        System.out.println("Poción 'vida'");
-                        System.out.println("Poción 'ataque'");
-                        System.out.println("Poción 'defensa'");
+                        System.out.println("Poción-> 'vida'");
+                        System.out.println("Poción-> 'ataque'");
+                        System.out.println("Poción-> 'defensa'");
                         usarpocion = s.next();
-                        if (usarpocion == "vida") {
+                        if (usarpocion.equals("vida")) {
                             if (banVida == 0) {
                                 auxj1.recibePuntosvida();
                                 banVida = 1;
@@ -326,7 +339,7 @@ public class Batalla {
                                 System.out.println("Pocion agotada");
                             }
 
-                        } else if (usarpocion == "ataque") {
+                        } else if (usarpocion.equals("ataque")) {
                             if (banAtaque == 0) {
                                 auxj1.recibePuntosAtaque();
                                 banAtaque = 1;
@@ -369,6 +382,7 @@ public class Batalla {
                         if (partida == 1) {
                             auxj2.ataque1(auxj1);
                             auxj2.calculadorElemental(auxj1);
+                            
                         } else {
                             auxj2.ataque2(auxj1);
                             auxj2.calculadorElemental(auxj1);
@@ -380,11 +394,11 @@ public class Batalla {
                         int banAtaque1 = 0;
                         int banDefensa1 = 0;
                         String usarpocion1;
-                        System.out.println("Poción 'vida'");
-                        System.out.println("Poción 'ataque'");
-                        System.out.println("Poción 'defensa'");
+                        System.out.println("Poción-> 'vida'");
+                        System.out.println("Poción-> 'ataque'");
+                        System.out.println("Poción-> 'defensa'");
                         usarpocion1 = s.next();
-                        if (usarpocion1 == "vida") {
+                        if (usarpocion1.equals("vida")) {
                             if (banVida1 == 0) {
                                 auxj2.recibePuntosvida();
                                 banVida1 = 1;
@@ -392,7 +406,7 @@ public class Batalla {
                                 System.out.println("Pocion agotada");
                             }
 
-                        } else if (usarpocion1 == "ataque") {
+                        } else if (usarpocion1.equals("ataque")) {
                             if (banAtaque1 == 0) {
                                 auxj2.recibePuntosAtaque();
                                 banAtaque1 = 1;
@@ -426,12 +440,12 @@ public class Batalla {
             }
 
             if (auxj1.getVida() < auxj2.getVida()) {
-                System.out.println("Esta batalla la gana " + jugador2.getNombre());
+                System.out.println("\n\nEsta batalla la gana \n\n" + jugador2.getNombre());
                 System.out.println(
                         jugador2.getNombre() + (puntajej2 + 1) + " - " + (puntajej1 + 1) + jugador1.getNombre());
                 puntajej2 = 1;
             } else {
-                System.out.println("Esta batalla la gana " + jugador1.getNombre());
+                System.out.println("\n\nEsta batalla la gana " + jugador1.getNombre()+"\n\n");
                 System.out.println(
                         jugador1.getNombre() + (puntajej1 + 1) + " - " + (puntajej2 + 1) + jugador2.getNombre());
                 puntajej1 = 1;

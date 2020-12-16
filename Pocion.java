@@ -22,4 +22,3 @@ public class Pocion {
         return nueva_defensa;
     }
 }
-
