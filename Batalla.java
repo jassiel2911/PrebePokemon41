@@ -25,7 +25,7 @@ public class Batalla {
         ArrayList<Pokemon> listapokemones = new ArrayList<>();
 
         Pocion pociones = new Pocion();
-
+        // Electricos
         Pokemon pokemon1 = new Pokemon("Pikachu", 250, 160, 180, 170, "OK", "Electrico", pociones);
         Pokemon pokemon2 = new Pokemon("Raikou", 173, 200, 160, 156, "OK", "Electrico", pociones);
         Pokemon pokemon3 = new Pokemon("Manectric", 250, 176, 180, 150, "OK", "Electrico", pociones);
